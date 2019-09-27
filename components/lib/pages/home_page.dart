@@ -5,8 +5,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Page Temporal')
-    );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Componenete Temporal'),
+      ),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text("ListTile Title"),
+          ),
+          Divider(),
+          ListTile(
+            title: Text('ListTile Title'),
+          ),
+          ListTile(
+            title: Text('ListTile Title'),
+          )
+        ],
+      ),
+    )
   }
 }
