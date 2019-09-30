@@ -10,16 +10,16 @@ class _MenuProvider {
       cargarData();
     }
 
-  cargarData() {
+  Future<List<dynamic>> cargarData() async {
 
-    rootBundle.loadString('data/menu_opts.json')
-    .then((data) {
-      
-        Map dataMap = json.decode( data );
+    final resp = await rootBundle.loadString('data/menu_opts.json')
+
+       Map dataMap = json.decode( resp );
         // print( dataMap['rutas'] );
         opciones = dataMap['rutas'];
     
-    });
+    
+    return opciones;
 
   }
 
